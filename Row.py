@@ -9,16 +9,16 @@ import random
 
 class Row:
     def __init__(self):
-        self.tiles: List[Tile] = []
-        self.decided = random.choice([0, 1, 2, 3])
+        self.tiles: List[Tile] = [] 
+        self.decided = random.choice([0, 1, 2, 3])    ##Choose which tile in row is black
         
         for x in range(4):
-            if x == self.decided:
+            if x == self.decided:    ##If decided, instantiate as black
                 tile = Tile(x * (WIDTH), -1 * (HEIGHT), True)
             else:
                 tile = Tile(x * (WIDTH), -1 * (HEIGHT), False)
                 
-            self.tiles.append(tile)
+            self.tiles.append(tile)    ##Add to row
 
         self.is_alive = True
 
@@ -48,3 +48,4 @@ class Row:
 
 
     
+
