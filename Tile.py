@@ -11,7 +11,7 @@ class Tile:
         self.state = state
 
         self.color = "black" if self.state else "white"
-        self.rect = pygame.Rect(x, y, WIDTH, HEIGHT)
+        self.rect = pygame.Rect(x, y, WIDTH, HEIGHT)   
         
         self.speed = 2
 
@@ -32,6 +32,7 @@ class Tile:
         return state
 
 
-    def set_color(self, color="green") -> None:
+    def set_color(self, color="green") -> None: ##if tile activated
         self.color = color
         
+
